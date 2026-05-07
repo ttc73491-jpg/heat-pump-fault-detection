@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large model files (exclude if needed, or use Git LFS)
+*.keras
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Data files already in 01_源数据/ and data/ — keep tracked
+
+# Logs
+*.log
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Environment
+.env
