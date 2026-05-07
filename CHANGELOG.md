@@ -53,3 +53,10 @@
 - **23:43** 编写并运行 `plot_feature_importance.py`，生成验证版特征重要性柱状图
 - **23:48** 创建 `CHANGELOG.md`（本日志），回溯记录全流程操作历史
 - **23:49** 创建 `CLAUDE.md`，为后续 AI 辅助开发提供项目指引
+
+## 2026-05-08 — GitHub 版本控制
+
+- **00:10** 创建 `.gitignore`，排除 `.keras` 模型文件、`settings.local.json` 等
+- **00:10** 初始化 Git 仓库，首次提交（89 个文件）
+- **00:12** 通过 `gh auth login` 绑定 GitHub 账号 `ttc73491-jpg`
+- **00:13** 创建远程仓库并推送至 https://github.com/ttc73491-jpg/heat-pump-fault-detection
