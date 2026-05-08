@@ -1,0 +1,18 @@
+======================================================================
+CORAL Ordinal Regression DNN Results
+======================================================================
+
+CORAL Flat 10-class: 18.27%
+CORAL Hierarchical:  50.63%
+
+Stage 1 (CORAL 4-class) Accuracy: 39.47%
+  Normal(0%)           Recall=100.00% FAR=  6.05% GMA= 96.93%
+  Light(5-20%)         Recall=  0.00% FAR=  0.00% GMA=  0.00%
+  Medium(25-35%)       Recall=  0.00% FAR=  0.00% GMA=  0.00%
+  Severe(40-50%)       Recall= 98.26% FAR= 78.69% GMA= 45.76%
+
+Group Results:
+  Normal: 100.00%
+  Light: 0.00%
+  Medium: 0.00%
+  Severe: 33.90%
