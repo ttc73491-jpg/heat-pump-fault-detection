@@ -144,3 +144,15 @@
 - **09:39** 更新 `实验总结报告.md`，全面重写：整合架构扫描、分层DNN、时序建模、CORAL有序回归、集成学习等全部实验结果，新增综合对比表、核心发现总结、突破方向建议
 - **09:45** 提交并推送至 GitHub (commit `682a4c0`)
 - **09:46** 更新 `CLAUDE.md`：补充新 DNN 脚本运行命令，更新实验结果表（commit `efc5774`）
+
+## 2026-05-08 — 项目文件整理
+
+- **10:30** 全项目文件整理，按实验类型分离脚本与输出：
+  - `02_特征提取/` → 新建 `output/`，4 个生成文件收入
+  - `03_SVM/` → 新建 `output/binary/` `output/tuned/` `output/hierarchical/` `output/comparison/`，13 个输出文件分类收入
+  - `04_随机森林/` → 新建 `output/binary/` `output/hierarchical/` `output/comparison/`，12 个输出文件分类收入
+  - `05_深度神经网络/` → 新建 `output/` 下 7 个实验子文件夹（m9_initial/ wider_network/ architecture_sweep/ hierarchical/ timeseries/ coral/ improved/），72 个输出文件按实验分类
+  - `dnn_wider_network/dnn_training.py` 重命名为 `dnn_training_wider.py` 移至顶层
+  - 删除空目录 `dnn_wider_network/` `architecture_sweep/` `__pycache__/`
+  - 共移动 101 个文件，新建 18 个文件夹，删除 3 个空目录
+  - `data/` 保留不动（与 `01_源数据/` 重复但用户决定保留）
