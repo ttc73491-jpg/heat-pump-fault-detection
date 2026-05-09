@@ -1,0 +1,31 @@
+======================================================================
+DNN 新特征(39→15) 最终结果
+======================================================================
+
+Features (15): ['V_sep_liq[%]', 'h_gc_out[kJ/kg]', 'h_gc_mid[kJ/kg]', 'T_mid[degC]', 'T_gc_mid[degC]', 'T_gc_out[degC]', 'Q_heat_s1[kW]', 'h_suc[kJ/kg]', 'T_dis[degC]', 'Q_heat_total[kW]', 'Q_heat_s2[kW]', 'h_dis[kJ/kg]', 'W_comp[kW]', 'h_eva_out[kJ/kg]', 'T_app[K]']
+
+Architecture Sweep Best: A8_Residual [128, 128, 128]
+Flat 10-Class Best Accuracy: 99.67%
+
+Hierarchical Classification:
+  Stage 1 Accuracy: 99.69%
+  Overall 10-class: 99.76%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 99.76% FAR=  0.21% MAR=  0.24% GMA= 99.78%
+  Light(5-20%)         Recall= 99.37% FAR=  0.03% MAR=  0.63% GMA= 99.67%
+  Medium(25-35%)       Recall=100.00% FAR=  0.14% MAR=  0.00% GMA= 99.93%
+  Severe(40-50%)       Recall= 99.68% FAR=  0.00% MAR=  0.32% GMA= 99.84%
+
+Group Results:
+  Normal: 100.00%
+  Light: 99.36%
+  Medium: 99.92%
+  Severe: 100.00%
+
+Comparison:
+  DNN New Features Flat:    99.67%
+  DNN New Features Hier:    99.76%
+  RF Transient (best ever): 69.59%
+  DNN Original Hier:        56.06%
+  RF Original Hier:         58.87%
