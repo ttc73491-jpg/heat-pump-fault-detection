@@ -1,0 +1,28 @@
+======================================================================
+DNN Hierarchical — Transient + Best Architecture [64, 32]
+======================================================================
+
+Features: 21
+Samples: 3000
+Architecture: [64, 32]
+
+Stage 1 Accuracy: 55.78%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 94.44% FAR=  0.25% MAR=  5.56% GMA= 97.06%
+  Light(5-20%)         Recall= 54.81% FAR=  3.49% MAR= 45.19% GMA= 72.73%
+  Medium(25-35%)       Recall= 11.85% FAR=  5.40% MAR= 88.15% GMA= 33.48%
+  Severe(40-50%)       Recall= 87.78% FAR= 53.97% MAR= 12.22% GMA= 63.57%
+
+Group Results:
+  Normal: 100.00%
+  Light: 93.24%
+  Medium: 28.12%
+  Severe: 34.18%
+
+Overall 10-class Accuracy: 61.74%
+
+Comparison:
+  Original [128,64,32] Transient Hierarchical: 59.53%
+  Best Arch [64,32] Transient Hierarchical: 61.74%
+  Best Arch [64,32] Transient Flat: 34.78%

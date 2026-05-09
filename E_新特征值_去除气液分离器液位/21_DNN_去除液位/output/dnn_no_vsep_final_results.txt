@@ -1,0 +1,32 @@
+======================================================================
+DNN 去V_sep_liq (38→27) 最终结果
+======================================================================
+
+Features (27): ['h_gc_out[kJ/kg]', 'T_dis[degC]', 'h_gc_mid[kJ/kg]', 'Q_heat_total[kW]', 'SH_suc[K]', 'h_eva_out[kJ/kg]', 'Q_heat_s2[kW]', 'T_app[K]', 'T_gc_mid[degC]', 'T_air_out[degC]', 'T_gc_out[degC]', 'T_mid[degC]', 'N_comp[rpm]', 'W_comp[kW]', 'Q_heat_s1[kW]', 'P_suc[bar]', 'T_eva_out[degC]', 'h_eva_in[kJ/kg]', 'COP[null]', 'T_suc[degC]', 'PR[null]', 'P_gc_out[bar]', 'P_eva_out[bar]', 'T_eva_in[degC]', 'P_eva_in[bar]', 'P_gc_mid[bar]', 'P_dis[bar]']
+
+Architecture Sweep Best: A8_Residual [128, 128, 128]
+Flat 10-Class Best Accuracy: 25.32%
+
+Hierarchical Classification:
+  Stage 1 Accuracy: 44.87%
+  Overall 10-class: 55.48%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 99.29% FAR=  0.03% MAR=  0.71% GMA= 99.63%
+  Light(5-20%)         Recall= 18.08% FAR=  0.27% MAR= 81.92% GMA= 42.46%
+  Medium(25-35%)       Recall= 11.82% FAR=  7.38% MAR= 88.18% GMA= 33.08%
+  Severe(40-50%)       Recall= 86.60% FAR= 71.07% MAR= 13.40% GMA= 50.05%
+
+Group Results:
+  Normal: 100.00%
+  Light: 97.37%
+  Medium: 38.26%
+  Severe: 32.23%
+
+Comparison:
+  DNN No V_sep_liq Flat:     25.32%
+  DNN No V_sep_liq Hier:     55.48%
+  DNN With V_sep_liq Hier:   99.76%
+  RF With V_sep_liq:         99.50%
+  RF Transient (old best):   69.59%
+  RF Original:               58.87%

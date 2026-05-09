@@ -1,0 +1,42 @@
+======================================================================
+Random Forest — 38 Features No V_sep_liq (27 selected)
+======================================================================
+
+Features: 27
+Features list: ['h_gc_out[kJ/kg]', 'T_dis[degC]', 'h_gc_mid[kJ/kg]', 'Q_heat_total[kW]', 'SH_suc[K]', 'h_eva_out[kJ/kg]', 'Q_heat_s2[kW]', 'T_app[K]', 'T_gc_mid[degC]', 'T_air_out[degC]', 'T_gc_out[degC]', 'T_mid[degC]', 'N_comp[rpm]', 'W_comp[kW]', 'Q_heat_s1[kW]', 'P_suc[bar]', 'T_eva_out[degC]', 'h_eva_in[kJ/kg]', 'COP[null]', 'T_suc[degC]', 'PR[null]', 'P_gc_out[bar]', 'P_eva_out[bar]', 'T_eva_in[degC]', 'P_eva_in[bar]', 'P_gc_mid[bar]', 'P_dis[bar]']
+Samples: 14010
+
+Flat 10-Class Accuracy: 26.86%
+
+Flat 10-Class Per-Class:
+  0%       Recall=100.00% FAR=  0.03% MAR=  0.00% GMA= 99.99%
+  5%       Recall= 20.95% FAR=  4.78% MAR= 79.05% GMA= 44.67%
+  10%      Recall= 43.57% FAR=  2.91% MAR= 56.43% GMA= 65.04%
+  20%      Recall=  9.74% FAR=  4.39% MAR= 90.26% GMA= 30.51%
+  25%      Recall=  7.60% FAR=  4.68% MAR= 92.40% GMA= 26.92%
+  30%      Recall=  8.33% FAR=  3.73% MAR= 91.67% GMA= 28.32%
+  35%      Recall=  9.03% FAR=  5.66% MAR= 90.97% GMA= 29.18%
+  40%      Recall=  6.19% FAR=  5.84% MAR= 93.81% GMA= 24.14%
+  45%      Recall= 55.00% FAR= 43.46% MAR= 45.00% GMA= 55.77%
+  50%      Recall=  8.33% FAR=  5.79% MAR= 91.67% GMA= 28.02%
+
+Stage 1 Accuracy: 45.68%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall=100.00% FAR=  0.03% MAR=  0.00% GMA= 99.99%
+  Light(5-20%)         Recall= 28.31% FAR= 12.88% MAR= 71.69% GMA= 49.66%
+  Medium(25-35%)       Recall= 18.79% FAR= 11.96% MAR= 81.21% GMA= 40.68%
+  Severe(40-50%)       Recall= 71.85% FAR= 52.72% MAR= 28.15% GMA= 58.28%
+
+Group Results:
+  Normal: 100.00%
+  Light: 86.55%
+  Medium: 40.93%
+  Severe: 33.55%
+
+Overall 10-class Accuracy (Hierarchical): 58.85%
+
+Comparison:
+  New Features RF (39→15):  99.50%
+  Original RF (30→20):      58.87%
+  No V_sep_liq RF (38→27):  58.85%

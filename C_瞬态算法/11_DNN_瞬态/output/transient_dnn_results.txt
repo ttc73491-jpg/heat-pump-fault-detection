@@ -1,0 +1,26 @@
+======================================================================
+DNN Hierarchical — Transient (first 300 rows only)
+======================================================================
+
+Features: 21
+Samples: 3000
+
+Stage 1 Accuracy: 56.33%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 92.22% FAR=  0.25% MAR=  7.78% GMA= 95.91%
+  Light(5-20%)         Recall= 50.74% FAR=  1.75% MAR= 49.26% GMA= 70.61%
+  Medium(25-35%)       Recall= 37.41% FAR= 22.06% MAR= 62.59% GMA= 53.99%
+  Severe(40-50%)       Recall= 68.89% FAR= 38.25% MAR= 31.11% GMA= 65.22%
+
+Group Results:
+  Normal: 100.00%
+  Light: 95.62%
+  Medium: 31.68%
+  Severe: 32.26%
+
+Overall 10-class Accuracy: 59.53%
+
+Comparison:
+  RF Transient:  69.59%
+  DNN Transient: 59.53%

@@ -1,0 +1,26 @@
+======================================================================
+SVM Hierarchical — Transient (first 300 rows only)
+======================================================================
+
+Features: 21
+Samples: 3000
+
+Stage 1 Accuracy: 53.33%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 98.89% FAR=  0.49% MAR=  1.11% GMA= 99.20%
+  Light(5-20%)         Recall= 50.37% FAR=  0.63% MAR= 49.63% GMA= 70.75%
+  Medium(25-35%)       Recall= 53.33% FAR= 32.54% MAR= 46.67% GMA= 59.98%
+  Severe(40-50%)       Recall= 41.11% FAR= 32.86% MAR= 58.89% GMA= 52.54%
+
+Group Results:
+  Normal: 100.00%
+  Light: 94.12%
+  Medium: 25.69%
+  Severe: 31.53%
+
+Overall 10-class Accuracy: 60.08%
+
+Comparison:
+  RF Transient:  69.59%
+  SVM Transient: 60.08%

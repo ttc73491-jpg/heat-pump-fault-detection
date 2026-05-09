@@ -1,0 +1,22 @@
+======================================================================
+Random Forest Hierarchical — Steady-State (remove first 300 rows)
+======================================================================
+
+Features: 18
+Samples: 11010
+
+Stage 1 Accuracy: 40.30%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall=100.00% FAR=  0.00% MAR=  0.00% GMA=100.00%
+  Light(5-20%)         Recall= 20.89% FAR= 14.36% MAR= 79.11% GMA= 42.29%
+  Medium(25-35%)       Recall=  8.78% FAR= 10.42% MAR= 91.22% GMA= 28.04%
+  Severe(40-50%)       Recall= 71.34% FAR= 60.51% MAR= 28.66% GMA= 53.08%
+
+Group Results:
+  Normal: 100.00%
+  Light: 83.57%
+  Medium: 26.44%
+  Severe: 30.83%
+
+Overall 10-class Accuracy: 55.90%

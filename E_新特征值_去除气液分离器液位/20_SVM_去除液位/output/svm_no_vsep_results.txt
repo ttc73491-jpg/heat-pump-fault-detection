@@ -1,0 +1,42 @@
+======================================================================
+SVM — 38 Features No V_sep_liq (27 selected)
+======================================================================
+
+Features: 27
+Features list: ['h_gc_out[kJ/kg]', 'T_dis[degC]', 'h_gc_mid[kJ/kg]', 'Q_heat_total[kW]', 'SH_suc[K]', 'h_eva_out[kJ/kg]', 'Q_heat_s2[kW]', 'T_app[K]', 'T_gc_mid[degC]', 'T_air_out[degC]', 'T_gc_out[degC]', 'T_mid[degC]', 'N_comp[rpm]', 'W_comp[kW]', 'Q_heat_s1[kW]', 'P_suc[bar]', 'T_eva_out[degC]', 'h_eva_in[kJ/kg]', 'COP[null]', 'T_suc[degC]', 'PR[null]', 'P_gc_out[bar]', 'P_eva_out[bar]', 'T_eva_in[degC]', 'P_eva_in[bar]', 'P_gc_mid[bar]', 'P_dis[bar]']
+Samples: 14010
+
+Flat 10-Class Accuracy: 24.65%
+
+Flat 10-Class Per-Class:
+  0%       Recall=100.00% FAR=  0.08% MAR=  0.00% GMA= 99.96%
+  5%       Recall= 15.71% FAR=  0.79% MAR= 84.29% GMA= 39.48%
+  10%      Recall= 36.19% FAR=  0.19% MAR= 63.81% GMA= 60.10%
+  20%      Recall= 84.32% FAR= 74.03% MAR= 15.68% GMA= 46.79%
+  25%      Recall=  0.24% FAR=  0.19% MAR= 99.76% GMA=  4.87%
+  30%      Recall=  0.00% FAR=  0.00% MAR=100.00% GMA=  0.00%
+  35%      Recall=  0.00% FAR=  0.13% MAR=100.00% GMA=  0.00%
+  40%      Recall=  0.48% FAR=  1.11% MAR= 99.52% GMA=  6.86%
+  45%      Recall=  9.05% FAR=  6.74% MAR= 90.95% GMA= 29.05%
+  50%      Recall=  0.48% FAR=  0.48% MAR= 99.52% GMA=  6.88%
+
+Stage 1 Accuracy: 45.16%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall= 99.76% FAR=  0.11% MAR=  0.24% GMA= 99.83%
+  Light(5-20%)         Recall= 17.53% FAR=  0.03% MAR= 82.47% GMA= 41.86%
+  Medium(25-35%)       Recall=  3.41% FAR=  2.45% MAR= 96.59% GMA= 18.24%
+  Severe(40-50%)       Recall= 96.35% FAR= 75.73% MAR=  3.65% GMA= 48.36%
+
+Group Results:
+  Normal: 100.00%
+  Light: 98.19%
+  Medium: 20.93%
+  Severe: 33.50%
+
+Overall 10-class Accuracy (Hierarchical): 55.40%
+
+Comparison:
+  New Features SVM (39→15):  99.28%
+  Original SVM (30→20):      53.25%
+  No V_sep_liq SVM (38→27):  55.40%

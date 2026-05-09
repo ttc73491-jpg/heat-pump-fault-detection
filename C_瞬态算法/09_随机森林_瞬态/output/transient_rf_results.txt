@@ -1,0 +1,27 @@
+======================================================================
+Random Forest Hierarchical — Transient (first 300 rows only)
+======================================================================
+
+Features: 21
+Samples: 3000
+
+Stage 1 Accuracy: 70.89%
+
+Stage 1 Per-Class:
+  Normal(0%)           Recall=100.00% FAR=  0.00% MAR=  0.00% GMA=100.00%
+  Light(5-20%)         Recall= 72.59% FAR=  5.71% MAR= 27.41% GMA= 82.73%
+  Medium(25-35%)       Recall= 61.85% FAR= 20.48% MAR= 38.15% GMA= 70.13%
+  Severe(40-50%)       Recall= 68.52% FAR= 15.40% MAR= 31.48% GMA= 76.14%
+
+Group Results:
+  Normal: 100.00%
+  Light: 96.43%
+  Medium: 50.30%
+  Severe: 43.78%
+
+Overall 10-class Accuracy: 69.59%
+
+Comparison:
+  Original (full):    58.87%
+  Steady (remove 300): 55.90%
+  Transient (first 300): 69.59%
