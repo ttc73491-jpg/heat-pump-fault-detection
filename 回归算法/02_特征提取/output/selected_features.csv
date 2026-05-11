@@ -1,0 +1,8 @@
+feature
+SH_suc[K]
+T_app[K]
+T_dis[degC]
+eta_v[null]
+Valve_open[null]
+m_dot[kg/s]
+T_eva_in[degC]
