@@ -2,6 +2,31 @@
 
 ## 2026-05-11 — 回归算法实验（首次）
 
+- **19:30** 创建 `回归算法/07_DNN_加液位/`，编写并运行 `dnn_regression_8features.py`：
+  - 特征：7个精英特征（来自02_特征提取）+ V_sep_liq[%]（气液分离器液位），共8特征
+  - Optuna贝叶斯优化，n_trials=50，MedianPruner剪枝
+  - 搜索空间：n_layers[1-3], units[16,32,64,128], activation[relu,elu], dropout[0-0.3], lr[1e-4~5e-2], batch_size[16,32]
+  - 最佳参数：2×128, relu, dropout=0.0033, lr=0.00079, batch_size=16
+  - 最佳Val MSE=**0.0523**（vs 无V_sep_liq的~155，降低约3000倍！）
+  - 结果：**R²=0.9991, RMSE=0.48%, MAE=0.13%, SD=0.48%**
+  - **±5%工程容差：99.88%**（vs 无V_sep_liq的~37%）
+  - 耗时~33min（50 trials），53 epochs（EarlyStopping在epoch 38恢复最佳权重）
+  - **V_sep_liq[%]是回归任务的决定性特征**：RMSE从12.5%降至0.48%（降低26倍），±5%容差从37%飙升至99.88%
+  - **该回归问题在含V_sep_liq时已被基本解决**，与分类实验中含V_sep_liq准确率>99%的模式完全一致
+
+- **18:25** 创建 `回归算法/06_DNN_4features/`，编写并运行 `dnn_regression_4features.py`：
+  - 跳过全部特征筛选，仅用4个原始传感器特征：P_dis[bar]（排气压力）、T_dis[degC]（排气温度）、P_eva_out[bar]（蒸发器出口压力）、T_air_out[degC]（出风温度）
+  - 对应源数据CSV 0-indexed列 [3, 4, 11, 21]
+  - Optuna贝叶斯优化，n_trials=50，MedianPruner剪枝
+  - 搜索空间：n_layers[1-3], units[16,32,64,128], activation[relu,elu], dropout[0-0.3], lr[1e-4~5e-2], batch_size[16,32]
+  - 最佳参数：3×64, elu, dropout=0.0054, lr=0.00493, batch_size=16
+  - 最佳Val MSE=156.13，86 epochs（EarlyStopping在epoch 71恢复最佳权重）
+  - 结果：R²=0.4004, RMSE=12.57%, MAE=9.70%, SD=12.53%
+  - ±5%工程容差：37.09%
+  - 耗时~41min（50 trials）
+  - **与7特征DNN对比：R²仅差0.01（0.4004 vs 0.4105），4个基础传感器即可达到同等性能**
+  - **核心发现：复杂的特征筛选和衍生特征计算未带来实质增益，特征瓶颈依然锁定在R²≈0.40**
+
 - **16:30** 创建回归算法项目结构：`回归算法/` 含 `01_源数据/`、`02_特征提取/`、`03_SVR/`、`04_RFR/`、`05_DNN/`
   - 源数据：10个CSV（39特征，来自新特征值数据集）
   - 目标变量：连续泄漏百分比（0%, 5%, 10%, 20%, 25%, 30%, 35%, 40%, 45%, 50%）
